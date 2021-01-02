@@ -1,0 +1,31 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Redirect 301 /docs/topography/golod/zarubinka/ /docs/topography/zarubinka/
+Redirect 301 /docs/topography/golod/eldynovka/ /docs/topography/eldynovka/
+Redirect 301 /docs/topography/golod/kazinka/ /docs/topography/kazinka/
+Redirect 301 /docs/topography/golod/sukharevo/ /docs/topography/sukharevo/
+Redirect 301 /docs/topography/golod/pristen/ /docs/topography/pristen/
+Redirect 301 /docs/topography/golod/yablonovo/ /docs/topography/yablonovo/
+Redirect 301 /docs/topography/golod/selivanovo/ /docs/topography/selivanovo/
+Redirect 301 /docs/topography/golod/mandrovo/ /docs/topography/mandrovo/
+Redirect 301 /docs/topography/golod/koloskovo/ /docs/topography/koloskovo/
+Redirect 301 /docs/topography/golod/maslozavod/ /docs/topography/maslozavod/
+Redirect 301 /docs/topography/golod/sch3/ /docs/topography/sch3/
+Redirect 301 /docs/topography/golod/ped/ /docs/topography/ped/
+Redirect 301 /docs/topography/terror/arest/ /docs/topography/arest/
+Redirect 301 /docs/topography/terror/skaletsky/ /docs/topography/skaletsky/
+Redirect 301 /docs/ist/archives/sobytia/ /docs/raznoye/sobytia/
+Redirect 301 /docs/ist/archives/postanova/ /docs/ukraine/postanova/
+Redirect 301 /docs/arch/ /docs/raznoye/
+Redirect 301 /docs/arch/ukrtemple/ /docs/ukraine/ukrtemple/
+Redirect 301 /docs/arch/sthutor/ /docs/ukraine/sthutor/
+Redirect 301 /docs/arch/alexandreii/ /docs/raznoye/alexandreii/
+Redirect 301 /docs/ist/books/etn/ /docs/ukraine/etn/
+Redirect 301 /docs/ist/books/uezd1907/ /docs/raznoye/uezd1907/
+
+RewriteRule ^docs/ist/papers/(/?)(.+)?$ /docs/papers/$2 [R=301,L]
+
+Header set Access-Control-Allow-Origin "*"

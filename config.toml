@@ -1,0 +1,10 @@
+baseURL = "https://waluiki.ru"
+languageCode = "ru-ru"
+title = "Обретенная память"
+theme = "book"
+enableemoji = "true"
+
+[params]
+  BookToC = "true"
+  BookLogo = 'logo.svg'
+  BookMenuBundle = '/menu'
